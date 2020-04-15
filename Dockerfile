@@ -1,6 +1,7 @@
 # Sample Dockerfile
 # Format: INSTRUCTION argument
-# To run: Open terminal and run command "sudo podman build -t test/apache ."
+# To build: sudo podman build -t test/apache .
+# To run  : sudo podman run --name apatch-e -d -p 10080:80 test/apache
 
 FROM rhel7.3
 
