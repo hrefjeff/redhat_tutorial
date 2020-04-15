@@ -11,7 +11,7 @@ MAINTAINER Jeffrey Allen <jeffwayne256@gmail.com>
 
 # Excecuting commands
 # Use && when possible because the more commands = more layers
-RUN yum install -y httpd && yum clean
+RUN yum install -y httpd && yum clean all
 
 #            EXPOSE doesn't actually do anything. It's metadata that
 # Important: communicates to the developer which port the application
