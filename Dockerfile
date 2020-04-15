@@ -1,6 +1,6 @@
 # Sample Dockerfile
-# Format: 
-# INSTRUCTION argument
+# Format: INSTRUCTION argument
+# To run: Open terminal and run command "sudo podman build -t test/apache ."
 
 FROM rhel7.3
 
