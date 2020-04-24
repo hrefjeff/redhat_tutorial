@@ -50,19 +50,23 @@ Gets a mysql service running in openshift
 
 already logged into cluster
 
-`oc status`
-`oc new-project mysql-openshift`
-`oc new-app --docker-image=someregistry --name=mysql-openshift -e MYSQL_USER=user1 -e MYSQL_PASSWORD=mypa55 -e MYSQL_DATABASE=testdb -e MYSQL_ROOT_PASSWORD=r00tpa55 --insecure-registry`
-`oc get pods` (check what has been created)
-`oc describe pod (whichever pod)`
-`oc get pods -w`
-`oc get svc`
-`oc expose service mysql-openshift`
-`oc get route`
-`oc port-forward (name of pod) 3306:3306`
+```
+oc status
+oc new-project mysql-openshift
+oc new-app --docker-image=someregistry --name=mysql-openshift -e MYSQL_USER=user1 -e MYSQL_PASSWORD=mypa55 -e MYSQL_DATABASE=testdb -e MYSQL_ROOT_PASSWORD=r00tpa55 --insecure-registry
+oc get pods (check what has been created)
+oc describe pod (whichever pod)
+oc get pods -w
+oc get svc
+oc expose service mysql-openshift
+oc get route
+oc port-forward (name of pod) 3306:3306
+```
 
 NEW TAB
 
-`mysql --uuser1 -pmypa55 --protocol tcp -h localhost` (connecting to my sql instance)
-`show databases;`
-`exit`
+```
+mysql --uuser1 -pmypa55 --protocol tcp -h localhost` (connecting to my sql instance)
+show databases;
+exit
+```
